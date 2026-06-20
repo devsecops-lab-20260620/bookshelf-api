@@ -32,26 +32,26 @@
 | page | ページ番号 |
 | limit | 1ページあたり件数 |
 | keyword | タイトル、著者、ISBN-13 のあいまい検索 |
-| ownerPersonId | 所有者で絞り込み |
+| ownerUserId | 所有者で絞り込み |
 | status | 状態で絞り込み |
 
-## 人
+## ユーザー
 
 | Method | Path | 認証 | 概要 |
 | --- | --- | --- | --- |
-| GET | /api/v1/people | 必要 | 人一覧を取得 |
-| POST | /api/v1/people | 必要 | 人を登録 |
-| GET | /api/v1/people/{personId} | 必要 | 人の詳細を取得 |
-| PATCH | /api/v1/people/{personId} | 必要 | 人情報を更新 |
-| DELETE | /api/v1/people/{personId} | 必要 | 人を削除 |
+| GET | /api/v1/users | 必要 | ユーザー一覧を取得 |
+| POST | /api/v1/users | 必要 | ユーザーを登録 |
+| GET | /api/v1/users/{userId} | 必要 | ユーザーの詳細を取得 |
+| PATCH | /api/v1/users/{userId} | 必要 | ユーザー情報を更新 |
+| DELETE | /api/v1/users/{userId} | 必要 | ユーザーを削除 |
 
-### 人一覧の主なクエリパラメータ
+### ユーザー一覧の主なクエリパラメータ
 
 | パラメータ | 説明 |
 | --- | --- |
 | page | ページ番号 |
 | limit | 1ページあたり件数 |
-| keyword | 名前、ログイン ID、メールでの検索 |
+| keyword | 名前、メールアドレスでの検索 |
 | role | 役割で絞り込み |
 
 ## リソースの更新ルール
