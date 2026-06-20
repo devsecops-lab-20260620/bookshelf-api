@@ -31,7 +31,7 @@
 | --- | --- |
 | page | ページ番号 |
 | limit | 1ページあたり件数 |
-| keyword | タイトル、著者、ISBN のあいまい検索 |
+| keyword | タイトル、著者、ISBN-13 のあいまい検索 |
 | ownerPersonId | 所有者で絞り込み |
 | status | 状態で絞り込み |
 

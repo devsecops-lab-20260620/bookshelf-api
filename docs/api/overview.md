@@ -19,11 +19,10 @@
 - `id`
 - `title`
 - `author`
-- `isbn`
+- `isbn`（ISBN-13。例: `978-4-7819-1628-6`）
 - `publisher`
 - `publishedYear`
 - `status`
-- `ownerPersonId`
 - `createdAt`
 - `updatedAt`
 
@@ -33,7 +32,7 @@
 
 - `id`
 - `name`
-- `loginId`
+
 - `email`
 - `role`
 - `createdAt`
