@@ -1,0 +1,19 @@
+name: "📘 Docs Update"
+description: "ドキュメントの修正・改善はこちら"
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: target
+    attributes:
+      label: 対象ドキュメント
+      placeholder: 例）README.md、docs/setup.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: change
+    attributes:
+      label: 修正内容
+      placeholder: どの部分をどう修正したいかを書いてください
+    validations:
+      required: true
