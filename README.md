@@ -64,6 +64,34 @@ npm run lint
 npm run lint:fix
 ```
 
+## Docker で実行
+
+### 1. コンテナイメージをビルド
+
+```bash
+docker build -t bookshelf-api:local .
+```
+
+### 2. コンテナを起動
+
+```bash
+docker run --rm -p 3000:3000 bookshelf-api:local
+```
+
+### 3. ヘルスチェック
+
+```bash
+curl http://localhost:3000/health
+```
+
+## GitHub Actions で GHCR に公開
+
+- ワークフロー: `.github/workflows/container-publish.yml`
+- トリガー: `main` ブランチへの push（マージ後の push を含む）
+- 公開先: `ghcr.io/<owner>/bookshelf-api`
+- 付与タグ: `latest`（デフォルトブランチ時）と `sha-<commit>`
+- 認証: `secrets.GITHUB_TOKEN` を利用（`packages: write` 権限）
+
 ### 4. 起動後の確認
 
 デフォルトでは 3000 番ポートで起動します。環境変数 PORT を設定している場合はその値が優先されます。
